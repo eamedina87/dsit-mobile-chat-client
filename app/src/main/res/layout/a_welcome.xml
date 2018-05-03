@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    >
+
+    <TextView
+        android:id="@+id/welcomeMessageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:textSize="28sp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal|left"
+        android:text="WhatsApp Aplication"/>
+
+
+
+
+        <Button
+        android:id="@+id/welcomeLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:text="LOGIN" />
+
+        <Button
+        android:id="@+id/welcomeRegisterButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+            android:layout_marginTop="12dp"
+        android:textColor="@color/orange"
+            android:background="@color/white"
+        android:text="REGISTER" />
+
+
+    
+</LinearLayout>

@@ -1,0 +1,160 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0426877daab8b3e36cb72fbe27ee5585/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:design:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/08a4506c4c333f2a75a6aa1d4f1b7850/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e9ca97f0272098c8674d62555c95283e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/59e9b6c7302c141a4f1bb33a675a83bd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/29222232360d44d6434df688b2799f39/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/fa67e29d8ddc655d7c9425b5bb40f879/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a74eb1d546bcc3d7628a2389a51135ac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5975887924f277bf65c95bf11b0d03a6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/af87c4af8283c7afe4a0a91b71026077/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/c251385383841f45cbe2f5ade0e6b191/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/4094f20418d4832d878aed6dd1f3085d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/dbe6940b362cb63c9f8b9df71ac42b39/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af070352e68215bb6ba84986c898bd3a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f2e972689668a29184a8d1a024a553d8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c37f0b07a7fc6ce64a425c6a6b99f073/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7ef67d10e4eaa5c8417d55b762779f9e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/105c42760e6d9942449032b69ac516d7/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+	package
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:3:11-37
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:5:11-36
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:4:11-34
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:7:6-9:40
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:7:6-9:40
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:7:6-9:40
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0426877daab8b3e36cb72fbe27ee5585/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0426877daab8b3e36cb72fbe27ee5585/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:design:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/08a4506c4c333f2a75a6aa1d4f1b7850/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/08a4506c4c333f2a75a6aa1d4f1b7850/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e9ca97f0272098c8674d62555c95283e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e9ca97f0272098c8674d62555c95283e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/59e9b6c7302c141a4f1bb33a675a83bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/59e9b6c7302c141a4f1bb33a675a83bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/29222232360d44d6434df688b2799f39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/29222232360d44d6434df688b2799f39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/fa67e29d8ddc655d7c9425b5bb40f879/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/fa67e29d8ddc655d7c9425b5bb40f879/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a74eb1d546bcc3d7628a2389a51135ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/a74eb1d546bcc3d7628a2389a51135ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5975887924f277bf65c95bf11b0d03a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/5975887924f277bf65c95bf11b0d03a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/af87c4af8283c7afe4a0a91b71026077/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/af87c4af8283c7afe4a0a91b71026077/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/c251385383841f45cbe2f5ade0e6b191/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/c251385383841f45cbe2f5ade0e6b191/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/4094f20418d4832d878aed6dd1f3085d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/4094f20418d4832d878aed6dd1f3085d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/dbe6940b362cb63c9f8b9df71ac42b39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/dbe6940b362cb63c9f8b9df71ac42b39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af070352e68215bb6ba84986c898bd3a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af070352e68215bb6ba84986c898bd3a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f2e972689668a29184a8d1a024a553d8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f2e972689668a29184a8d1a024a553d8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c37f0b07a7fc6ce64a425c6a6b99f073/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c37f0b07a7fc6ce64a425c6a6b99f073/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7ef67d10e4eaa5c8417d55b762779f9e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7ef67d10e4eaa5c8417d55b762779f9e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/105c42760e6d9942449032b69ac516d7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/105c42760e6d9942449032b69ac516d7/AndroidManifest.xml:20:5-44
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:7:6-9:40
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:7:6-9:40
+	android:maxSdkVersion
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:9:11-37
+	android:targetSdkVersion
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:8:11-40
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:7:16-42
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:11:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:12:22-78
+application
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:14:5-43:19
+	android:label
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:15:18-50
+	android:hardwareAccelerated
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:16:18-52
+	android:theme
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:17:18-49
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:14:18-46
+activity#edu.upc.whatsapp.a_WelcomeActivity
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:19:9-26:20
+	android:label
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:20:19-51
+	android:theme
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:21:21-64
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:19:19-51
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:22:13-25:29
+action#android.intent.action.MAIN
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:24:27-74
+activity#edu.upc.whatsapp.b_LoginActivity
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:28:9-32:20
+	android:label
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:30:19-45
+	android:theme
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:29:19-62
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:28:19-49
+activity#edu.upc.whatsapp.c_RegistrationActivity
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:33:9-34:68
+	android:label
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:33:57-85
+	android:theme
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:34:13-56
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:33:19-56
+activity#edu.upc.whatsapp.d_UsersListActivity
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:35:9-36:68
+	android:label
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:35:54-80
+	android:theme
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:36:13-56
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:35:19-53
+activity#edu.upc.whatsapp.e_MessagesActivity
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:37:9-41:20
+	android:label
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:38:19-43
+	android:windowSoftInputMode
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:39:19-60
+	android:theme
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:40:13-56
+	android:name
+		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:37:19-52

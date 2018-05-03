@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">_WhatsApp</string>
+    <string name="login_hint_login">Login</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_hint_name">Name</string>
+    <string name="login_hint_surname">Surname</string>
+    <string name="login_hint_email">Email</string>
+    <string name="register_button">Register</string>
+    <string name="view_incomplete">Campo incompleto</string>
+    <string name="register_incomplete">Por favor llene toda la información</string>
+</resources>
