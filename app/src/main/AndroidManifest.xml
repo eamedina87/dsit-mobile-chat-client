@@ -32,13 +32,6 @@
         </activity>
         <activity android:name="c_RegistrationActivity" android:label="Sign up Form"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="d_UsersListActivity" android:label="Users List"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="e_MessagesActivity" 
-                  android:label="Messages"
-                  android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-                
+
     </application>
 </manifest> 

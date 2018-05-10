@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [com.jakewharton:butterknife:8.8.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/0426877daab8b3e36cb72fbe27ee5585/AndroidManifest.xml:2:1-7:12
 MERGED from [com.android.support:design:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/08a4506c4c333f2a75a6aa1d4f1b7850/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e9ca97f0272098c8674d62555c95283e/AndroidManifest.xml:17:1-22:12
@@ -21,9 +21,9 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/erickmedina/.gradle/ca
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c37f0b07a7fc6ce64a425c6a6b99f073/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7ef67d10e4eaa5c8417d55b762779f9e/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /Users/erickmedina/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/105c42760e6d9942449032b69ac516d7/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
-INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:3:11-37
 		INJECTED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml
@@ -97,7 +97,7 @@ ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/mai
 	android:name
 		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:12:22-78
 application
-ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:14:5-43:19
+ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:14:5-36:19
 	android:label
 		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:15:18-50
 	android:hardwareAccelerated
@@ -140,21 +140,3 @@ ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/mai
 		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:34:13-56
 	android:name
 		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:33:19-56
-activity#edu.upc.whatsapp.d_UsersListActivity
-ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:35:9-36:68
-	android:label
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:35:54-80
-	android:theme
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:36:13-56
-	android:name
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:35:19-53
-activity#edu.upc.whatsapp.e_MessagesActivity
-ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:37:9-41:20
-	android:label
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:38:19-43
-	android:windowSoftInputMode
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:39:19-60
-	android:theme
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:40:13-56
-	android:name
-		ADDED from /Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/AndroidManifest.xml:37:19-52

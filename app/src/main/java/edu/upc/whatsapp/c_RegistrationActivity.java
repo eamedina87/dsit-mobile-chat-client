@@ -6,6 +6,7 @@ import butterknife.OnClick;
 import edu.upc.whatsapp.REST_API.User_REST_API;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -129,6 +130,13 @@ public class c_RegistrationActivity extends Activity {
         case 1:
           toastShow("Registration successful");
           //closeActivity
+          //Go to Messages Activity
+          Intent intent =
+                  new Intent(
+                          c_RegistrationActivity.this,
+                          e_MessagesActivity.class);
+          startActivity(intent);
+
           finish();
           break;
         case -1:

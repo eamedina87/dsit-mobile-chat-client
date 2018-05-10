@@ -38,16 +38,6 @@
             android:name="edu.upc.whatsapp.c_RegistrationActivity"
             android:label="Sign up Form"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="edu.upc.whatsapp.d_UsersListActivity"
-            android:label="Users List"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="edu.upc.whatsapp.e_MessagesActivity"
-            android:label="Messages"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

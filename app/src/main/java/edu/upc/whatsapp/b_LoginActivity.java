@@ -6,6 +6,7 @@ import butterknife.OnClick;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -43,9 +44,13 @@ public class b_LoginActivity extends Activity{
   @OnClick(R.id.login_Button)
   public void onLoginClick() {
       if (isInfoComplete()){
-
-        progressDialog = ProgressDialog.show(this, "LoginActivity", "Logging into the server...");
-        // if there's still a running thread doing something, we don't create a new one
+          //TODO CHANGE for ProgressBar
+        progressDialog =
+                ProgressDialog.show(this,
+                        "LoginActivity",
+                        "Logging into the server...");
+        // if there's still a running thread doing something,
+          // we don't create a new one
         if (operationPerformer == null) {
           operationPerformer = new OperationPerformer(handler);
           operationPerformer.start();
@@ -93,8 +98,12 @@ public class b_LoginActivity extends Activity{
       switch (msg.getData().getInt("result")) {
         case 1:
           toastShow("Login successful");
-          
-          //...
+          //Go to Messages Activity
+          Intent intent =
+                  new Intent(
+                          b_LoginActivity.this,
+                          e_MessagesActivity.class);
+          startActivity(intent);
           
           finish();
           break;
@@ -102,7 +111,9 @@ public class b_LoginActivity extends Activity{
           toastShow("Login unsuccessful, try again please");
           break;
         case -2:
-          toastShow("Not logged in, connection problem due to: " + msg.getData().getString("error"));
+          toastShow("Not logged in, " +
+                  "connection problem due to: "
+                  + msg.getData().getString("error"));
           break;
       }
     }

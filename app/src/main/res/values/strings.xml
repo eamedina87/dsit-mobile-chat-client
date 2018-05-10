@@ -9,4 +9,7 @@
     <string name="register_button">Register</string>
     <string name="view_incomplete">Campo incompleto</string>
     <string name="register_incomplete">Por favor llene toda la información</string>
+    <string name="users_msg_empty">No users found</string>
+    <string name="users_msg_error">An error ocurred while obtaining the data. Tap to retry!</string>
+    <string name="logout">Logout</string>
 </resources>

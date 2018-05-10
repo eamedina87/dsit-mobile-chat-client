@@ -1,7 +1,5 @@
 package edu.upc.whatsapp;
 
-import edu.upc.whatsapp.REST_API.Message_REST_API;
-import edu.upc.whatsapp.adapter.MyAdapter_messages;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -22,45 +20,191 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
-import entity.Message;
-import java.util.Date;
+
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+//import edu.upc.whatsapp.comms.RPC;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import edu.upc.whatsapp.REST_API.Message_REST_API;
+import edu.upc.whatsapp.REST_API.UserInfo_REST_API;
+import edu.upc.whatsapp.REST_API.User_REST_API;
+import edu.upc.whatsapp.adapter.MyAdapter_messages;
+import entity.Message;
+
 public class e_MessagesActivity extends Activity {
+
+  @BindView(R.id.title)
+  TextView title;
+  @BindView(R.id.input)
+  EditText input_text;
+  @BindView(R.id.mybutton)
+  Button button;
 
   _GlobalState globalState;
   ProgressDialog progressDialog;
   private ListView conversation;
   private MyAdapter_messages adapter;
-  private List<Message> messages;
-  private EditText input_text;
-  private Button button;
-  private InputMethodManager inMgr;
   private boolean enlarged = false, shrunk = true;
-  private Timer timer;
 
-  @Override
+  private Timer timer;
+    private fetchAllMessages_Task mFetchAllMessagesTask;
+    private boolean isFetchAllMessagesTaskRunning = false;
+
+    @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.e_messages);
-
     globalState = (_GlobalState) getApplication();
+    setContentView(R.layout.e_messages);
+    ButterKnife.bind(this);
 
-    TextView title = (TextView) findViewById(R.id.title);
-    title.setText("Talking with: " + globalState.user_to_talk_to.getName());
 
-    conversation = (ListView) findViewById(R.id.conversation);
-    new fetchAllMessages_Task().execute(globalState.my_user.getId(), globalState.user_to_talk_to.getId());
 
+
+  }
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+      title.setText("Talking with: " + globalState.user_to_talk_to.getName());
+      setup_input_text();
+    getMessagesFromAPI();
+
+
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    if (mFetchAllMessagesTask !=null
+            && isFetchAllMessagesTaskRunning){
+        mFetchAllMessagesTask.cancel(true);
+    }
+    //...
+  }
+
+    private void getMessagesFromAPI() {
+        if (!isFetchAllMessagesTaskRunning) {
+            mFetchAllMessagesTask = new fetchAllMessages_Task();
+            mFetchAllMessagesTask.execute(globalState.my_user.getId(), globalState.user_to_talk_to.getId());
+        }
+    }
+
+  private class fetchAllMessages_Task extends AsyncTask<Integer, Void, List<Message>> {
+
+    @Override
+    protected void onPreExecute() {
+      progressDialog = ProgressDialog.show(e_MessagesActivity.this,
+          "MessagesActivity", "downloading messages...");
+      isFetchAllMessagesTaskRunning = true;
+    }
+
+    @Override
+    protected List<Message> doInBackground(Integer... userIds) {
+      return Message_REST_API.retrieveMessages(0, 100);
+    }
+
+    @Override
+    protected void onPostExecute(List<Message> all_messages) {
+      progressDialog.dismiss();
+      isFetchAllMessagesTaskRunning = false;
+      if (all_messages == null) {
+        toastShow("There's been an error downloading the messages");
+      } else {
+        toastShow(all_messages.size()+" messages downloaded");
+
+        //...
+
+      }
+    }
+  }
+
+  private class fetchNewMessages_Task extends AsyncTask<Integer, Void, List<Message>> {
+
+    @Override
+    protected List<Message> doInBackground(Integer... userIds) {
+
+      //...
+
+      //remove this sentence on completing the code:
+      return null;
+    }
+
+    @Override
+    protected void onPostExecute(List<Message> new_messages) {
+      if (new_messages == null) {
+        toastShow("There's been an error downloading new messages");
+      } else {
+        toastShow(new_messages.size()+" new message/s downloaded");
+
+        //...
+
+      }
+    }
+  }
+
+  public void sendText(final View view) {
+
+    //...
+
+    input_text.setText("");
+
+    //to hide the soft keyboard after sending the message:
+    InputMethodManager inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+    inMgr.hideSoftInputFromWindow(input_text.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+  }
+  private class SendMessage_Task extends AsyncTask<Message, Void, Boolean> {
+
+    @Override
+    protected void onPreExecute() {
+      toastShow("sending message");
+    }
+
+    @Override
+    protected Boolean doInBackground(Message... messages) {
+
+      //Message_REST_API.myCreateMessage();
+
+      //remove this sentence on completing the code:
+      return false;
+    }
+
+    @Override
+    protected void onPostExecute(Boolean resultOk) {
+      if (resultOk) {
+        toastShow("message sent");
+
+        //...
+
+      } else {
+        toastShow("There's been an error sending the message");
+      }
+    }
+  }
+
+  private class fetchNewMessagesTimerTask extends TimerTask {
+
+    @Override
+    public void run() {
+
+      //...
+
+    }
+
+
+  }
+
+  private void setup_input_text(){
+
+    input_text = (EditText) findViewById(R.id.input);
     button = (Button) findViewById(R.id.mybutton);
     button.setEnabled(false);
 
-    inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-
-    input_text = (EditText) findViewById(R.id.input);
+    //to be notified when the content of the input_text is modified:
     input_text.addTextChangedListener(new TextWatcher() {
+
       public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
       }
 
@@ -75,19 +219,23 @@ public class e_MessagesActivity extends Activity {
         }
       }
     });
-    //to program the send soft key from the soft keyboard:
+
+
+    //to program the send soft key of the soft keyboard:
     input_text.setOnEditorActionListener(new OnEditorActionListener() {
       @Override
       public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         boolean handled = false;
         if (actionId == EditorInfo.IME_ACTION_SEND) {
-          addText(null);
+          sendText(null);
           handled = true;
         }
         return handled;
       }
     });
-    //to detect a change on the height of the visible window on the screen.
+
+
+    //to detect a change on the height of the window on the screen:
     input_text.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
       @Override
       public void onGlobalLayout() {
@@ -118,150 +266,6 @@ public class e_MessagesActivity extends Activity {
         }
       }
     });
-
-  }
-
-  @Override
-  protected void onResume() {
-    super.onResume();
-    
-    //...
-    
-  }
-
-  @Override
-  protected void onPause() {
-    super.onPause();
-    
-    //...
-    
-  }
-
-  public void addText(final View view) {
-
-    //...
-
-    input_text.setText("");
-
-    //to hide the soft keyboard after sending the message:
-    inMgr.hideSoftInputFromWindow(input_text.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-  }
-
-  private class SendMessage_Task extends AsyncTask<Message, Void, Integer> {
-
-    @Override
-    protected void onPreExecute() {
-      toastShow("sending message");
-    }
-
-    @Override
-    protected Integer doInBackground(Message... messages) {
-      try {
-        
-        //...
-        
-        return 0;
-      } catch (Exception ex) {
-        ex.printStackTrace();
-        return -1;
-      }
-    }
-
-    @Override
-    protected void onPostExecute(Integer result) {
-      if (result == 0) {
-        toastShow("message sent");
-        
-        //...
-        
-      } else {
-        toastShow("message not sent");
-      }
-    }
-  }
-
-  private class fetchAllMessages_Task extends AsyncTask<Integer, Void, List<Message>> {
-
-    @Override
-    protected void onPreExecute() {
-      progressDialog = ProgressDialog.show(e_MessagesActivity.this, "MessagesActivity", "downloading messages...");
-    }
-
-    @Override
-    protected List<Message> doInBackground(Integer... userIds) {
-      try {
-        
-        //...
-        //this return must be removed when adding the code:
-        return null;
-        
-      } catch (Exception ex) {
-        ex.printStackTrace();
-        return null;
-      }
-    }
-
-    @Override
-    protected void onPostExecute(List<Message> all_messages) {
-      progressDialog.dismiss();
-      if (all_messages == null) {
-        toastShow("There's been an error downloading the messages");
-      } else {
-        toastShow(all_messages.size()+" messages downloaded");
-        
-        //...
-        
-        conversation.post(new Runnable() {
-          @Override
-          public void run() {
-            conversation.setSelection(conversation.getCount() - 1);
-          }
-        });
-      }
-    }
-  }
-
-  private class fetchNewMessages_Task extends AsyncTask<Integer, Void, List<Message>> {
-
-    @Override
-    protected void onPreExecute() {
-    }
-
-    @Override
-    protected List<Message> doInBackground(Integer... userIds) {
-      try {
-        
-        //...
-        //this return must be removed when adding the code:
-        return null;
-        
-      } catch (Exception ex) {
-        ex.printStackTrace();
-        return null;
-      }
-    }
-
-    @Override
-    protected void onPostExecute(List<Message> new_messages) {
-      if (new_messages == null) {
-        toastShow("There's been an error downloading new messages");
-      } else {
-        toastShow(new_messages.size()+" new messages downloaded");
-        
-        //...
-        
-      }
-    }
-  }
-
-  private class fetchNewMessagesTimerTask extends TimerTask {
-
-    @Override
-    public void run() {
-      
-      //...
-      
-    }
   }
 
   private void toastShow(String text) {

@@ -8,7 +8,9 @@ import android.widget.Button;
 
 
 public class a_WelcomeActivity extends Activity implements View.OnClickListener {
-    
+
+    private _GlobalState globalState;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -17,6 +19,16 @@ public class a_WelcomeActivity extends Activity implements View.OnClickListener 
         
         ((Button)findViewById(R.id.welcomeLoginButton)).setOnClickListener(this);
         ((Button)findViewById(R.id.welcomeRegisterButton)).setOnClickListener(this);
+
+        globalState = (_GlobalState)getApplication();
+        if (globalState.my_user!=null){
+            //Is Logged In
+            Intent intent = new Intent(a_WelcomeActivity.this, d_UsersListActivity.class);
+            startActivity(intent);
+
+            finish();
+        }
+
     }
     public void onClick(View arg0) {
 

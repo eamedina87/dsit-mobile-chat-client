@@ -57,7 +57,7 @@ public class MyAdapter_messages extends BaseAdapter {
   }
 
   public int getCount() {
-    return messages.size();
+    return messages==null?0:messages.size();
   }
 
   public View getView(int position, View convertView, ViewGroup parent) {
@@ -77,6 +77,7 @@ public class MyAdapter_messages extends BaseAdapter {
     ((TextView) ((RelativeLayout) convertView).getChildAt(0)).setVisibility(date_visibility.get(position));
     ((TextView) ((RelativeLayout) convertView).getChildAt(0)).setText(sdf.format(date));
     //...
+    //TODO
     ((TextView) ((RelativeLayout) convertView).getChildAt(2)).setText(sdf2.format(date));
 
     return convertView;
@@ -95,11 +96,13 @@ public class MyAdapter_messages extends BaseAdapter {
     Message message = messages.get(position);
     //...
     //this return must be removed when adding the code:
+    //TODO
     return -1;
   }
 
   @Override
   public int getViewTypeCount() {
+    //TODO
     return 2; // Count of different layouts
   }
 

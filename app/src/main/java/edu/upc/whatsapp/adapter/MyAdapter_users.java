@@ -39,7 +39,7 @@ public class MyAdapter_users extends BaseAdapter {
         convertView = LayoutInflater.from(context).inflate(R.layout.row_twotextviews, parent, false);
       }
 
-      //...
+      //TODO
       
       return convertView;
     }
@@ -51,4 +51,9 @@ public class MyAdapter_users extends BaseAdapter {
     public long getItemId(int arg0) {
       return users.get(arg0).getId();
     }
-  }
+
+    public void swapUsers(List<UserInfo> users) {
+        this.users = users;
+        notifyDataSetChanged();
+    }
+}

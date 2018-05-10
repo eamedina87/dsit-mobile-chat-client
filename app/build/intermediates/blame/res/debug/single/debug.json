@@ -856,6 +856,10 @@
         "source": "/Users/erickmedina/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e9ca97f0272098c8674d62555c95283e/res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/build/intermediates/res/merged/debug/layout_d_userslist.xml.flat",
+        "source": "/Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/src/main/res/layout/d_userslist.xml"
+    },
+    {
         "merged": "/Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/build/intermediates/res/merged/debug/anim_design_bottom_sheet_slide_in.xml.flat",
         "source": "/Users/erickmedina/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/08a4506c4c333f2a75a6aa1d4f1b7850/res/anim/design_bottom_sheet_slide_in.xml"
     },
