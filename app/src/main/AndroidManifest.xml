@@ -32,6 +32,9 @@
         </activity>
         <activity android:name="c_RegistrationActivity" android:label="Sign up Form"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
+        <activity android:name=".d_UsersListActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".d_UsersListActivity_New"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 </manifest> 

@@ -131,12 +131,13 @@ public class c_RegistrationActivity extends Activity {
           toastShow("Registration successful");
           //closeActivity
           //Go to Messages Activity
-          Intent intent =
+          /*Intent intent =
                   new Intent(
                           c_RegistrationActivity.this,
-                          e_MessagesActivity.class);
+                          d_UsersListActivity_New.class);
           startActivity(intent);
-
+          */
+          setResult(RESULT_OK);
           finish();
           break;
         case -1:
@@ -167,7 +168,6 @@ public class c_RegistrationActivity extends Activity {
       Bundle b = new Bundle();
       try {
 
-        //TODO Comunicacion con la API
         UserInfo userInfo = User_REST_API.createUser_return_UserInfo(mUser);
 
         //Assign globalstate myuser

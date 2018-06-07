@@ -85,7 +85,7 @@ public class d_UsersListActivity extends Activity implements ListView.OnItemClic
 
     @Override
     protected List<UserInfo> doInBackground(Void... nothing) {
-      return UserInfo_REST_API.allUserInfos();
+      return UserInfo_REST_API.allUserInfos(globalState.my_user);
     }
 
     @Override

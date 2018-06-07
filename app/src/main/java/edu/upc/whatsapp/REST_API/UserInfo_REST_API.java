@@ -14,7 +14,7 @@ import static edu.upc.whatsapp.REST_API.Comms.url_rpc;
 
 public class UserInfo_REST_API {
 
-  public static List<UserInfo> allUserInfos(){
+  public static List<UserInfo> allUserInfos(UserInfo localUser){
     try {
       URL url = new URL(url_rpc+"/entity.userinfo");
       HttpURLConnection ucon = (HttpURLConnection) url.openConnection();
@@ -29,6 +29,12 @@ public class UserInfo_REST_API {
       UserInfo[] userArray = gson.fromJson(in, UserInfo[].class);
       List<UserInfo> users = new ArrayList<UserInfo>();
       users.addAll(Arrays.asList(userArray));
+      for (UserInfo userInfo:users){
+          if (userInfo.getName().equals("test") || userInfo.getId()==localUser.getId()) {
+              users.remove(userInfo);
+          }
+      }
+
       return users;
 
     } catch (Exception e) {

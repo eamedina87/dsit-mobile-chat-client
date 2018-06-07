@@ -99,11 +99,12 @@ public class b_LoginActivity extends Activity{
         case 1:
           toastShow("Login successful");
           //Go to Messages Activity
-          Intent intent =
+          /*Intent intent =
                   new Intent(
                           b_LoginActivity.this,
-                          e_MessagesActivity.class);
-          startActivity(intent);
+                          d_UsersListActivity_New.class);
+          startActivity(intent);*/
+          setResult(RESULT_OK);
           
           finish();
           break;

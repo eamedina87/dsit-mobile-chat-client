@@ -41,8 +41,8 @@ public class User_REST_API {
       URL url = new URL(url_rpc+"/entity.user/login");
       HttpURLConnection ucon = (HttpURLConnection) url.openConnection();
       ucon.setRequestMethod("POST");
-      //ucon.setDoInput(true);
-      //ucon.setDoOutput(true);
+      ucon.setDoInput(true);
+      ucon.setDoOutput(true);
       ucon.setRequestProperty("Content-Type", "application/json");
       ucon.setRequestProperty("Accept", "application/json");
 

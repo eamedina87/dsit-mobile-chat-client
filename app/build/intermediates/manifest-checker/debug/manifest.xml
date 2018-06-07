@@ -38,6 +38,12 @@
             android:name="edu.upc.whatsapp.c_RegistrationActivity"
             android:label="Sign up Form"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.upc.whatsapp.d_UsersListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.upc.whatsapp.d_UsersListActivity_New"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

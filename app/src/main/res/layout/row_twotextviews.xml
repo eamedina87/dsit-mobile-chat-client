@@ -2,25 +2,38 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingTop="2dip"
-    android:paddingBottom="2dip"
-    android:paddingLeft="20dip"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="20dp"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"> 
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    >
 
-    <TextView 
+    <TextView
+        android:id="@+id/user_name"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceLarge"
         tools:text="Name"
         />
 
-    <TextView 
+    <TextView
+        android:id="@+id/user_lastname"
         android:layout_width="fill_parent" 
         android:layout_height="wrap_content" 
         android:textAppearance="?android:textAppearanceSmall"
         tools:text="Surname"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/grey"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         />
         
 </LinearLayout> 

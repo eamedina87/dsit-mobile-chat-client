@@ -94,6 +94,7 @@ public class MyAdapter_messages extends BaseAdapter {
   @Override
   public int getItemViewType(int position) {
     Message message = messages.get(position);
+
     //...
     //this return must be removed when adding the code:
     //TODO
