@@ -1,4 +1,4 @@
-#Thu Jun 07 23:27:10 CEST 2018
+#Thu Jun 07 23:54:41 CEST 2018
 base.0=/Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/build/intermediates/transforms/dexMerger/debug/22
 path.0=classes.dex
 renamed.0=classes.dex

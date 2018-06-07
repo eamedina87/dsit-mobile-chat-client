@@ -53,7 +53,7 @@ public class MyAdapter_messages_new extends RecyclerView.Adapter<MyAdapter_messa
     @Override
     public int getItemViewType(int position) {
         Message mMessage = messages.get(position);
-        if (mMessage.getUserSender()==user){
+        if (mMessage.getUserSender().getId()==user.getId()){
             return VIEW_TYPE_RIGHT_BUBBLE;
         } else {
             return VIEW_TYPE_LEFT_BUBBLE;

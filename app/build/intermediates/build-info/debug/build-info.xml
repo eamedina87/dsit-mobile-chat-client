@@ -3,10 +3,10 @@
     abi="x86"
     api-level="27"
     build-mode="FULL"
-    density="420dpi"
+    density="560dpi"
     format="10"
     plugin-version="3.1.1"
-    timestamp="1528407637531"
+    timestamp="1528408486613"
     token="7057297214857335314"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -65,7 +65,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1528407637531"
+        timestamp="1528408486613"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/erickmedina/StudioProjects/dsit-mobile-chat-client/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"

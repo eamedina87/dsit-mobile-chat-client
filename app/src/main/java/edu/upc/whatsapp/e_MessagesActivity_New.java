@@ -64,6 +64,7 @@ public class e_MessagesActivity_New extends Activity {
     private Message mLastMessage;
     private Integer mRemoteUserId;
     private Integer mLocalUserId;
+    private List<Message> mAllMessages;
 
     @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +137,7 @@ public class e_MessagesActivity_New extends Activity {
       if (all_messages == null) {
         toastShow("There's been an error downloading the messages");
       } else {
-
+          mAllMessages = all_messages;
           if (all_messages.size()==0){
             mErrorMessage.setVisibility(View.VISIBLE);
             messageRecyclerView.setVisibility(View.INVISIBLE);
@@ -174,11 +175,12 @@ public class e_MessagesActivity_New extends Activity {
         if (new_messages.size()>0) {
             toastShow(new_messages.size()+" new message/s downloaded");
             mLastMessage = new_messages.get(new_messages.size() - 1);
+            mAllMessages.addAll(new_messages);
             if (adapter == null) {
-                adapter = new MyAdapter_messages_new(new_messages, globalState.my_user);
+                adapter = new MyAdapter_messages_new(mAllMessages, globalState.my_user);
                 messageRecyclerView.setAdapter(adapter);
             } else {
-                adapter.swapMessage(new_messages);
+                adapter.swapMessage(mAllMessages);
             }
         }
 
@@ -229,7 +231,6 @@ public class e_MessagesActivity_New extends Activity {
       if (resultOk) {
         toastShow("message sent");
           new fetchNewMessages_Task().execute(mLocalUserId, mRemoteUserId);
-
       } else {
         toastShow("There's been an error sending the message");
       }

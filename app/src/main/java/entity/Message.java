@@ -103,6 +103,6 @@ public class Message implements Serializable {
 
   public String getDateString() {
     DateFormat format = new DateFormat();
-    return format.format("HH:mm", getDate()).toString();
+    return format.format("HH:mm (dd MMM)", getDate()).toString();
   }
 }
