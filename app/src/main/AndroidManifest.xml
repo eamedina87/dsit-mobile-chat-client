@@ -36,5 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".d_UsersListActivity_New"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".e_MessagesActivity_New"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 </manifest> 

@@ -9,7 +9,7 @@
     android:layout_height="wrap_content">
     
     <TextView 
-        android:id="@+id/date"
+        android:id="@+id/nodate"
         android:paddingTop="5dip" 
         android:paddingBottom="5dip"
         android:paddingLeft="5dip" 
@@ -28,12 +28,13 @@
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@id/date"
+        android:layout_below="@id/nodate"
         android:textColor="@color/black"
         android:textSize="12dip"
         android:background="@drawable/bubble_yellow"/> 
     
-    <TextView 
+    <TextView
+        android:id="@+id/date"
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/texto"

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -17,10 +18,12 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -42,22 +45,33 @@ public class e_MessagesActivity_New extends Activity {
   EditText input_text;
   @BindView(R.id.mybutton)
   Button button;
+  @BindView(R.id.conversation)
+  RecyclerView messageRecyclerView;
+    @BindView(R.id.errorMessage)
+    TextView mErrorMessage;
+    @BindView(R.id.progressBar)
+    ProgressBar mProgressbar;
 
   _GlobalState globalState;
-  ProgressDialog progressDialog;
-  private ListView conversation;
+
+
   private MyAdapter_messages_new adapter;
   //private boolean enlarged = false, shrunk = true;
 
   private Timer timer;
     private fetchAllMessages_Task mFetchAllMessagesTask;
     private boolean isFetchAllMessagesTaskRunning = false;
+    private Message mLastMessage;
+    private Integer mRemoteUserId;
+    private Integer mLocalUserId;
 
     @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     globalState = (_GlobalState) getApplication();
-    setContentView(R.layout.e_messages);
+    mLocalUserId = globalState.my_user.getId();
+    mRemoteUserId = globalState.user_to_talk_to.getId();
+    setContentView(R.layout.e_messages_new);
     ButterKnife.bind(this);
 
   }
@@ -68,8 +82,6 @@ public class e_MessagesActivity_New extends Activity {
       title.setText("Talking with: " + globalState.user_to_talk_to.getName());
       setup_input_text();
     getMessagesFromAPI();
-    setNewMessagesTimer();
-
   }
 
     @Override
@@ -96,7 +108,7 @@ public class e_MessagesActivity_New extends Activity {
     private void getMessagesFromAPI() {
         if (!isFetchAllMessagesTaskRunning) {
             mFetchAllMessagesTask = new fetchAllMessages_Task();
-            mFetchAllMessagesTask.execute(globalState.my_user.getId(), globalState.user_to_talk_to.getId());
+            mFetchAllMessagesTask.execute(mLocalUserId, mRemoteUserId);
         }
     }
 
@@ -104,26 +116,44 @@ public class e_MessagesActivity_New extends Activity {
 
     @Override
     protected void onPreExecute() {
-      progressDialog = ProgressDialog.show(e_MessagesActivity_New.this,
-          "MessagesActivity", "downloading messages...");
+      //progressDialog = ProgressDialog.show(e_MessagesActivity_New.this,
+      //    "MessagesActivity", "downloading messages...");
+        mProgressbar.setVisibility(View.VISIBLE);
       isFetchAllMessagesTaskRunning = true;
     }
 
     @Override
     protected List<Message> doInBackground(Integer... userIds) {
-      return Message_REST_API.retrieveMessages(0, 100);
+      //return Message_REST_API.retrieveMessages(0, 100);
+        return Message_REST_API.retrieveMessages(userIds[0], userIds[1]);
     }
 
     @Override
     protected void onPostExecute(List<Message> all_messages) {
-      progressDialog.dismiss();
+      //progressDialog.dismiss();
+        mProgressbar.setVisibility(View.GONE);
       isFetchAllMessagesTaskRunning = false;
       if (all_messages == null) {
         toastShow("There's been an error downloading the messages");
       } else {
-        toastShow(all_messages.size()+" messages downloaded");
 
-        //...
+          if (all_messages.size()==0){
+            mErrorMessage.setVisibility(View.VISIBLE);
+            messageRecyclerView.setVisibility(View.INVISIBLE);
+          } else {
+              mErrorMessage.setVisibility(View.GONE);
+              messageRecyclerView.setVisibility(View.VISIBLE);
+              toastShow(all_messages.size()+" messages downloaded");
+              mLastMessage = all_messages.get(all_messages.size()-1);
+              if (adapter==null){
+                  adapter = new MyAdapter_messages_new(all_messages, globalState.my_user);
+                  messageRecyclerView.setAdapter(adapter);
+              } else {
+                  adapter.swapMessage(all_messages);
+              }
+              setNewMessagesTimer();
+          }
+
 
       }
     }
@@ -133,39 +163,49 @@ public class e_MessagesActivity_New extends Activity {
 
     @Override
     protected List<Message> doInBackground(Integer... userIds) {
-
-      //...
-
-      //remove this sentence on completing the code:
-      return null;
+      return Message_REST_API.retrieveNewMessages(userIds[0], userIds[1], mLastMessage);
     }
 
     @Override
     protected void onPostExecute(List<Message> new_messages) {
       if (new_messages == null) {
-        toastShow("There's been an error downloading new messages");
+        //toastShow("There's been an error downloading new messages");
       } else {
-        toastShow(new_messages.size()+" new message/s downloaded");
-
-        if (adapter==null){
-
-        } else {
-
+        if (new_messages.size()>0) {
+            toastShow(new_messages.size()+" new message/s downloaded");
+            mLastMessage = new_messages.get(new_messages.size() - 1);
+            if (adapter == null) {
+                adapter = new MyAdapter_messages_new(new_messages, globalState.my_user);
+                messageRecyclerView.setAdapter(adapter);
+            } else {
+                adapter.swapMessage(new_messages);
+            }
         }
 
       }
     }
   }
 
-  public void sendText(final View view) {
+  public void addText(final View view) {
+    String content = input_text.getText().toString();
 
-    //...
+    if (content!=null && !content.isEmpty()){
+        Message newMessage = new Message();
+        newMessage.setContent(content);
+        newMessage.setDate(new Date());
+        newMessage.setUserReceiver(globalState.user_to_talk_to);
+        newMessage.setUserSender(globalState.my_user);
+        new SendMessage_Task().execute(newMessage);
 
-    input_text.setText("");
+        input_text.setText("");
 
-    //to hide the soft keyboard after sending the message:
-    InputMethodManager inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-    inMgr.hideSoftInputFromWindow(input_text.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        //to hide the soft keyboard after sending the message:
+        InputMethodManager inMgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inMgr.hideSoftInputFromWindow(input_text.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
+
+
   }
   private class SendMessage_Task extends AsyncTask<Message, Void, Boolean> {
 
@@ -176,19 +216,19 @@ public class e_MessagesActivity_New extends Activity {
 
     @Override
     protected Boolean doInBackground(Message... messages) {
-
-      //Message_REST_API.myCreateMessage();
-
-      //remove this sentence on completing the code:
-      return false;
+        try {
+            Message_REST_API.myCreateMessage(messages[0]);
+            return true;
+        } catch (Exception e){
+            return false;
+        }
     }
 
     @Override
     protected void onPostExecute(Boolean resultOk) {
       if (resultOk) {
         toastShow("message sent");
-
-        //todo
+          new fetchNewMessages_Task().execute(mLocalUserId, mRemoteUserId);
 
       } else {
         toastShow("There's been an error sending the message");
@@ -199,7 +239,7 @@ public class e_MessagesActivity_New extends Activity {
   private class fetchNewMessagesTimerTask extends TimerTask {
     @Override
     public void run() {
-      new fetchNewMessages_Task().execute();
+      new fetchNewMessages_Task().execute(mLocalUserId, mRemoteUserId);
     }
   }
 
@@ -234,7 +274,7 @@ public class e_MessagesActivity_New extends Activity {
       public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         boolean handled = false;
         if (actionId == EditorInfo.IME_ACTION_SEND) {
-          sendText(null);
+          addText(null);
           handled = true;
         }
         return handled;

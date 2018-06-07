@@ -63,7 +63,7 @@ public class MyAdapter_messages_new extends RecyclerView.Adapter<MyAdapter_messa
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Message mMessage = messages.get(position);
-        holder.date.setText(mMessage.getDate().toString());
+        holder.date.setText(mMessage.getDateString());
         holder.message.setText(mMessage.getContent());
     }
 

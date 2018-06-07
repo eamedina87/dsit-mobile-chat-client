@@ -14,7 +14,7 @@ import java.lang.Override;
 public class c_RegistrationActivity_ViewBinding implements Unbinder {
   private c_RegistrationActivity target;
 
-  private View view2131230844;
+  private View view2131230845;
 
   @UiThread
   public c_RegistrationActivity_ViewBinding(c_RegistrationActivity target) {
@@ -32,7 +32,7 @@ public class c_RegistrationActivity_ViewBinding implements Unbinder {
     target.mSurname = Utils.findRequiredViewAsType(source, R.id.register_surname, "field 'mSurname'", TextInputEditText.class);
     target.mLogin = Utils.findRequiredViewAsType(source, R.id.register_login, "field 'mLogin'", TextInputEditText.class);
     view = Utils.findRequiredView(source, R.id.registration_Button, "method 'onRegisterClick'");
-    view2131230844 = view;
+    view2131230845 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -54,7 +54,7 @@ public class c_RegistrationActivity_ViewBinding implements Unbinder {
     target.mSurname = null;
     target.mLogin = null;
 
-    view2131230844.setOnClickListener(null);
-    view2131230844 = null;
+    view2131230845.setOnClickListener(null);
+    view2131230845 = null;
   }
 }

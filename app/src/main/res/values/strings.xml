@@ -11,5 +11,6 @@
     <string name="register_incomplete">Por favor llene toda la información</string>
     <string name="users_msg_empty">No users found</string>
     <string name="users_msg_error">An error ocurred while obtaining the data. Tap to retry!</string>
+    <string name="messages_msg_empty">No messages found</string>
     <string name="logout">Logout</string>
 </resources>

@@ -5,7 +5,10 @@
  */
 package entity;
 
+import android.text.format.DateFormat;
+
 import java.io.Serializable;
+
 import java.util.Date;
 
 
@@ -97,5 +100,9 @@ public class Message implements Serializable {
   public String toString() {
     return "entity.Message[ id=" + id + " ]";
   }
-  
+
+  public String getDateString() {
+    DateFormat format = new DateFormat();
+    return format.format("HH:mm", getDate()).toString();
+  }
 }
