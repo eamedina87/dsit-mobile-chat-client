@@ -147,7 +147,11 @@ public class e_MessagesActivity_New extends Activity {
       } else {
         toastShow(new_messages.size()+" new message/s downloaded");
 
-        //...
+        if (adapter==null){
+
+        } else {
+
+        }
 
       }
     }
@@ -184,7 +188,7 @@ public class e_MessagesActivity_New extends Activity {
       if (resultOk) {
         toastShow("message sent");
 
-        //...
+        //todo
 
       } else {
         toastShow("There's been an error sending the message");
@@ -193,14 +197,10 @@ public class e_MessagesActivity_New extends Activity {
   }
 
   private class fetchNewMessagesTimerTask extends TimerTask {
-    //TODO who calls this?
-
     @Override
     public void run() {
       new fetchNewMessages_Task().execute();
     }
-
-
   }
 
   private void setup_input_text(){

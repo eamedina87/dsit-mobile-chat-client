@@ -29,9 +29,17 @@ public class UserInfo_REST_API {
       UserInfo[] userArray = gson.fromJson(in, UserInfo[].class);
       List<UserInfo> users = new ArrayList<UserInfo>();
       users.addAll(Arrays.asList(userArray));
-      for (UserInfo userInfo:users){
+      ArrayList<UserInfo> removeUsers = new ArrayList<>();
+      for (int i=0; i<users.size();i++){
+          UserInfo userInfo = users.get(i);
           if (userInfo.getName().equals("test") || userInfo.getId()==localUser.getId()) {
-              users.remove(userInfo);
+              removeUsers.add(userInfo);
+          }
+      }
+
+      if (removeUsers.size()>0){
+          for (UserInfo user:removeUsers){
+              users.remove(user);
           }
       }
 
